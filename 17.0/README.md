@@ -15,11 +15,10 @@ git clone https://github.com/raphaelh/odoo-docker.git
 cd odoo-docker/17.0
 
 # 2. Clone the addon(s) you want to test
-mkdir -p addons
 git clone --depth 1 -b 17.0 https://github.com/raphaelh/odoo-yavin.git addons/odoo-yavin
 
 # 3. Start
-# NOTE: make sure the odoo-yavin/ submodule is up to date!
+# NOTE: make sure the odoo-yavin/ addon is up to date!
 docker compose up --build -d
 
 # 4. Open http://localhost:8069 and create the database
